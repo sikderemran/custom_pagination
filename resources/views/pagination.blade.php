@@ -55,7 +55,7 @@
                                                 <a class="page-link" href="{{$products->previousPageUrl()}}" rel="next" aria-label="Next »">‹</a>
                                             @endif
                                         </li>
-                                        @if ($products->lastPage()-$products->currentPage()<=1)
+                                        @if ($products->lastPage()-$products->currentPage()<=1 && $current_page-1!=0 && $current_page-1!=1)
                                             @php
                                                 $current_page=$current_page-1;
                                             @endphp
